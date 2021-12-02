@@ -39,7 +39,8 @@ export default function RegisterForm() {
       firstName: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('First name required'),
       lastName: Yup.string().min(2, 'Too Short!').max(50, 'Too Long!').required('Last name required'),
       phoneNumber: Yup.number().required('Phone number is required'),
-      password: Yup.string().required('Password is required')
+      password: Yup.string().required('Password is required'),
+      email: Yup.string().required('Email is required')
    });
 
    const formik = useFormik({
